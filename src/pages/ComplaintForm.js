@@ -128,7 +128,7 @@ const ComplaintForm = () => {
   
     // Submit data to the backend
     try {
-      const response = await fetch("http://localhost:1337/api/complaints", {
+      const response = await fetch("/api/complaints", {
         method: "POST",
         body: submissionData,
       });

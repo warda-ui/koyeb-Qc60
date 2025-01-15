@@ -28,7 +28,7 @@ function Register() {
         const hashedPassword = await bcrypt.hash(password, 10); // Hash the password with a salt of 10
 
         try {
-            const response = await fetch('http://localhost:1337/api/register', {
+            const response = await fetch('/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
