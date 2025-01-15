@@ -1,0 +1,96 @@
+/* Login.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Same font as the register page */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); 
+}
+
+.login-card {
+    background: #dbdef120; /* White background for the card */
+    border-radius: 20px; /* Rounded corners */
+    padding: 40px; /* Padding inside the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Max width for the card */
+    width: 100%; /* Full width on small screens */
+}
+
+.login-card h1 {
+    margin-bottom: 30px; /* Margin below heading */
+    font-size: 36px; /* Heading size */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center text */
+}
+
+.login-card input {
+    width: 100%; /* Full width */
+    padding: 14px; /* Inside padding */
+    margin: 10px 0; /* Margin around inputs */
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus */
+}
+
+.login-card input:focus {
+    border-color: #6a11cb; /* Purple border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.3); /* Light shadow on focus */
+}
+
+.password-input {
+    position: relative; /* For positioning the eye icon */
+}
+
+.password-input input {
+    padding-right: 30px; /* Extra space for the icon */
+}
+
+.password-input span {
+    position: absolute;
+    right: 10px; /* Position the icon on the right */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%); /* Adjust vertical position */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #6a11cb; /* Purple icon color */
+    font-size: 20px; /* Icon size */
+}
+
+.login-card button {
+    width: 100%; /* Full width for the button */
+    padding: 14px; /* Padding inside button */
+    background-color: #6a11cb; /* Button background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Button font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for background and scale */
+}
+
+.login-card button:hover {
+    background-color: #2575fc; /* Lighter purple background on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.signup-container {
+    text-align: center; /* Centered text for signup */
+    margin-top: 20px; /* Margin above signup text */
+}
+
+.signup-container span {
+    color: #2575fc; /* Blue color for the link */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: underline; /* Underline for the link */
+}
+
+.signup-container span:hover {
+    color: #6a11cb; /* Change color on hover */
+}

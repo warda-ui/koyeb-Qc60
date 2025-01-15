@@ -1,0 +1,156 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d) !important; 
+  color: #e40a0a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+.app-bar {
+  background: linear-gradient(to right, #6a82fb, #fc5c7d) !important ; /* Same gradient as background */
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-bar .icon-btn {
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.app-bar .icon-btn.toggle-btn {
+  margin-right: 15px;
+}
+
+.app-bar .icon-btn:hover {
+  color: #ffd700; /* Soft yellow highlight */
+  transform: scale(1.1);
+}
+
+.app-bar .app-title {
+  flex-grow: 1;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Sidebar Drawer */
+.drawer {
+  width: 250px;
+  background: linear-gradient(to bottom, #6a82fbc8, #fc5c7ca6) !important; /* Matching gradient */
+  color: rgba(57, 20, 108, 0.194);
+  height: 100%;
+  margin-top: 65px;
+}
+
+.drawer .drawer-list {
+  padding: 0;
+}
+
+.drawer .list-item {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.drawer .list-item:hover {
+  background: rgba(57, 28, 112, 0.2) !important; /* Transparent white for hover */
+  transform: translateX(5px);
+}
+
+.drawer .list-item .icon {
+  margin-right: 10px;
+  color: white;
+}
+
+.drawer .list-item .icon:hover {
+  color: #ffd700; /* Soft yellow for icons */
+}
+
+.drawer .list-item a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Main Dashboard Content */
+.main-content {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.heading {
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* Card Button Styles */
+.card-button {
+  background: #fff !important;
+  color: #6a82fb !important; /* Gradient color as text */
+  height: 120px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.card-button:hover {
+  background: linear-gradient(135deg, #fc5c7d, #6a82fb) !important; /* Reverse gradient */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.card-button:focus {
+  outline: none;
+}
+
+/* Footer */
+.footer {
+  background: #6a82fb;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

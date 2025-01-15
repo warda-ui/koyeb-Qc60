@@ -1,0 +1,140 @@
+.dashboard-container {
+    display: flex;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-left: 0; /* To ensure space for the sidebar when open */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #1976d2;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: 0.3s;
+    padding-top: 60px;
+    color: white;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-toggle {
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    z-index: 1100; /* Ensuring the toggle button stays above other elements */
+}
+
+.sidebar button {
+    padding: 15px 25px;
+    text-align: left;
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #1565c0;
+}
+
+.dashboard-header {
+    padding: 20px;
+    background-color: #1976d2;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-main {
+    margin-left: 250px; /* Ensure content shifts to the right when the sidebar opens */
+    padding: 20px;
+    background-color: #38080836;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease; /* Smooth transition for the main content */
+    width: 100%;
+}
+
+.dashboard-container.sidebar-open .dashboard-main {
+    margin-left: 0; /* Remove margin-left when the sidebar is closed */
+}
+
+.main-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.main-buttons .MuiButton-root {
+    width: 30%;
+}
+
+.quote-section {
+    margin-top: 30px;
+}
+
+.quote-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.quote-item {
+    background-color: rgba(176, 112, 228, 0.414);
+    padding: 20px;
+    border: 1px solid #0e0808;
+    border-radius: 5px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.quote-item .MuiButton-root {
+    margin-top: 10px;
+}
+
+.quote-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.quote-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.quote-input:focus {
+    border: 2px solid #1976d2;
+}
+
+.MuiButton-root {
+    margin-top: 10px;
+}
+
+.profile-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}

@@ -1,0 +1,171 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  height: calc(100vh - 60px); /* Subtract navbar height */
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d); 
+  padding-top: 20px;
+  position: fixed;
+  top: 60px; /* Positioned under navbar */
+  left: -250px; /* Hidden initially */
+  transition: left 0.3s ease-in-out; /* Smooth sliding effect */
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Professional shadow effect */
+}
+
+.sidebar.open {
+  left: 0; /* Visible when toggled */
+}
+
+.sidebar-header {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align icon and text to the left */
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #34495e;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #1abc9c; /* Highlight on hover */
+  transform: translateX(5px); /* Subtle movement effect */
+}
+
+.sidebar-link svg {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 20px;
+}
+
+.back-button {
+  background-color: #e74c3c; /* Highlighted for "Back" */
+}
+
+.back-button:hover {
+  background-color: #c0392b;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between the toggle button and title */
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d); 
+  padding: 10px 20px;
+  color: white;
+  height: 60px; /* Ensure consistent height */
+  box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+.navbar .icon-button {
+  width: 40px; /* Set a fixed size for the button */
+  height: 40px;
+  color: white; /* Icon color */
+}
+
+.navbar .title {
+  flex-grow: 1; /* Push the title to take available space */
+  text-align: center; /* Center-align the title */
+  font-size: 18px; /* Adjust title size */
+  font-weight: bold; /* Bold font for emphasis */
+  margin: 0; /* Remove any default margin */
+}
+
+
+/* Main Content */
+.MuiTypography-root {
+  font-family: Arial, sans-serif;
+  
+}
+
+.MuiTableCell-root {
+  padding: 10px;
+  border-color: #6a11cb; /* Purple border on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+}
+
+/* Button Container */
+.MuiButton-root {
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+  }
+  .navbar {
+    background-color: #2c3e5000;
+  }
+  .MuiButton-root {
+    min-width: 150px;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+}
+
+/* Table actions (edit/delete icons) */
+.MuiIconButton-root {
+  padding: 8px;
+}
+
+/* Dialog popup styling */
+.MuiDialog-paper {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.MuiDialogTitle-root {
+  font-weight: bold;
+}
+
+.MuiDialogActions-root {
+  justify-content: flex-end;
+}
+
+.MuiTextField-root {
+  margin-bottom: 10px;
+}
+/* Table container styles for pending users and admins */
+.MuiTableCell-root {
+  padding: 16px;
+  font-size: 16px;
+}
+
+.MuiTableRow-root {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.MuiTableRow-root:hover {
+  background-color: #f5f5f5;
+}
+
+/* Admin Panel Button Styling */
+.MuiButton-root.MuiButton-containedPrimary {
+  background-color: #1abc9c;
+}
+
+.MuiButton-root.MuiButton-containedSecondary {
+  background-color: #2ecc71;
+}
+
+.MuiButton-root.MuiButton-containedDefault {
+  background-color: #9b59b6;
+}
+
+.MuiButton-root.MuiButton-containedError {
+  background-color: #e74c3c;
+}

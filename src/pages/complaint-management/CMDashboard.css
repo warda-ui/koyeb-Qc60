@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f6;
+  margin: 0;
+}
+
+/* AppBar (Top Navbar) */
+.MuiAppBar-root {
+  background-color: #4cafa5e1; /* Same as the old dashboard's green color */
+  color: white;
+}
+
+.MuiToolbar-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Drawer (Sidebar) */
+.MuiDrawer-paper {
+  background-color: #215074; /* Darker green to match the theme */
+  color: white;
+}
+
+.MuiListItem-root {
+  padding: 16px;
+}
+
+.MuiListItemText-root {
+  font-size: 16px;
+}
+
+.MuiDrawer-paper .MuiListItem-button:hover {
+  background-color: #38538e;
+}
+
+.MuiListItemIcon-root {
+  color: white;
+}
+
+/* Main Content */
+.MuiBox-root.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 64px; /* Offset for AppBar */
+  background-color: #f5f5f5;
+}
+
+.MuiTypography-root.MuiTypography-h4 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.MuiBox-root.main-content .MuiButton-root {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: none;
+}
+
+.MuiButton-root.MuiButton-contained {
+  background-color: #388e5f; /* Button background color (dark green) */
+  color: white;
+}
+
+.MuiButton-root.MuiButton-contained:hover {
+  background-color: #016b04; /* Lighter green on hover */
+}
+
+.MuiButton-root.MuiButton-outlined {
+  border: 2px solid #388e3c;
+  color: #388e3c;
+}
+
+.MuiButton-root.MuiButton-outlined:hover {
+  background-color: #388e3c;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .MuiAppBar-root {
+    font-size: 18px;
+  }
+
+  .MuiDrawer-paper {
+    width: 200px;
+  }
+
+  .MuiTypography-root.MuiTypography-h4 {
+    font-size: 24px;
+  }
+
+  .MuiButton-root.MuiButton-contained,
+  .MuiButton-root.MuiButton-outlined {
+    min-width: 150px;
+  }
+}
