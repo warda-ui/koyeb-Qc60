@@ -24,7 +24,7 @@ app.use(
     cors({
         origin: [
             'https://teenage-ocelot-qualitycomplaince360-cde4fbf8.koyeb.app/', // Frontend URL on Koyeb
-            'http://localhost:1337', // For local testing
+            'http://localhost:3000', // For local testing
         ],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true,
@@ -47,17 +47,12 @@ app.use('/api/users', userRoutes);
 app.use('/api/complaints', complaintRoutes);
 
 
-// Root endpoint (optional)
 app.get('/', (req, res) => {
-  res.send('Hello from your server!');
+  res.send('Hello from your server!'); 
+  // Or render an initial HTML page if you have a frontend
 });
 
-// Handle non-API routes to serve React app
-
-app.get('*', (req, res, next) => {
-  if (req.path.startsWith('/api')) {
-    return next(); // Skip serving React for API routes
-  }
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
