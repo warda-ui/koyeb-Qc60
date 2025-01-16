@@ -152,7 +152,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "client": "react-scripts start",
-    "client-build": "react-scripts build",
+    "build": "react-scripts build",
     "client-test": "react-scripts test",
     "client-eject": "react-scripts eject",
     "dev-all": "concurrently \"npm run dev\" \"npm run client\""

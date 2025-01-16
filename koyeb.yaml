@@ -1,0 +1,8 @@
+name: my-app
+type: web
+build:
+  commands:
+    - npm install
+    - npm run build
+run:
+  command: npm start

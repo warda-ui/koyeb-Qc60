@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(
     cors({
         origin: [
-            'https://rude-andrei-deadlycompliance420-98f4d407.koyeb.app/', // Frontend URL on Koyeb
+            'https://teenage-ocelot-qualitycomplaince360-cde4fbf8.koyeb.app/', // Frontend URL on Koyeb
             'http://localhost:1337', // For local testing
         ],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -53,6 +53,7 @@ app.get('/', (req, res) => {
 });
 
 // Handle non-API routes to serve React app
+
 app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api')) {
     return next(); // Skip serving React for API routes
@@ -60,10 +61,9 @@ app.get('*', (req, res, next) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-
 // Database Connection
 
-const dbURI="mongodb+srv://wardarajpoot050:warda1234@complaintsystem.u8ebr.mongodb.net/complaint_system?retryWrites=true&w=majority";
+const uri="mongodb+srv://wardarajpoot050:warda1234@complaintsystem.u8ebr.mongodb.net/complaint_system?retryWrites=true&w=majority";
 
 // Connect to MongoDB
 mongoose
