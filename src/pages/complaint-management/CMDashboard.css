@@ -7,19 +7,19 @@ body {
 
 /* AppBar (Top Navbar) */
 .MuiAppBar-root {
-  background-color: #4cafa5e1; /* Same as the old dashboard's green color */
+  background-color: #d34949e1; /* Same as the old dashboard's green color */
   color: white;
 }
 
 .MuiToolbar-root {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
 }
 
 /* Drawer (Sidebar) */
 .MuiDrawer-paper {
-  background-color: #215074; /* Darker green to match the theme */
+  background-color: #c44455; /* Darker green to match the theme */
   color: white;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .MuiDrawer-paper .MuiListItem-button:hover {
-  background-color: #38538e;
+  background-color: #af373d;
 }
 
 .MuiListItemIcon-root {
@@ -71,7 +71,7 @@ body {
 }
 
 .MuiButton-root.MuiButton-outlined {
-  border: 2px solid #388e3c;
+  border: 2px solid #8e3838;
   color: #388e3c;
 }
 
@@ -87,7 +87,7 @@ body {
   }
 
   .MuiDrawer-paper {
-    width: 200px;
+    width: 10px;
   }
 
   .MuiTypography-root.MuiTypography-h4 {

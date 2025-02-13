@@ -62,14 +62,13 @@ const CMDashboard = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Complaint Management Dashboard
           </Typography>
           <Button
             color="inherit"
             startIcon={<SettingsIcon />}
             onClick={() => handleNavigation('/admin-dashboard')}
           >
-            Admin Dashboard
+          
           </Button>
         </Toolbar>
       </AppBar>

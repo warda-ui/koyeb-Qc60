@@ -1,3 +1,6 @@
+require('dotenv').config({ path: './.env' });
+console.log("JWT_SECRET:", process.env.JWT_SECRET); // ✅ Debugging line
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -6,7 +9,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt'); // Changed to bcryptjs
 const User = require('./models/user.model');
 const Complaint = require('./models/schema');
-require('dotenv').config();
 const app = express();
 const router = express.Router();
 const userRoutes = require('./routes/user.routes');
@@ -15,7 +17,6 @@ const { v4: uuidv4 } = require("uuid");
 const multer = require("multer");
 const path = require('path');
 const port = process.env.PORT || 1337;
-
 
 app.use(express.json());
 
@@ -33,34 +34,19 @@ app.use(
 
 
 
-
  // Create a router instance
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static("uploads")); // Serve uploaded files statically
-app.use(express.static(path.join(__dirname, 'build'))); // Serve React build folder statically
-
 
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/complaints', complaintRoutes);
 
+// Database Connection 
 
-app.get('/', (req, res) => {
-  res.send('Hello from your server!'); 
-  // Or render an initial HTML page if you have a frontend
-});
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-// Database Connection
-
-const uri="mongodb+srv://wardarajpoot050:warda1234@complaintsystem.u8ebr.mongodb.net/complaint_system?retryWrites=true&w=majority";
-
-// Connect to MongoDB
+ const uri ="mongodb+srv://wardarajpoot050:warda1234@complaintsystem.u8ebr.mongodb.net/?retryWrites=true&w=majority&appName=ComplaintSystem";// Connect to MongoDB
 mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {

@@ -9,13 +9,13 @@
 .sidebar {
     width: 250px;
     height: 100%;
-    background-color: #1976d2;
+    background-color: #b0b4b7;
     position: fixed;
     top: 0;
     left: -250px;
     transition: 0.3s;
     padding-top: 60px;
-    color: white;
+    color: rgb(12, 12, 12);
     z-index: 1000;
 }
 
@@ -25,7 +25,7 @@
 
 .sidebar-toggle {
     font-size: 30px;
-    color: white;
+    color: #1fd21cc5;
     background: none;
     border: none;
     cursor: pointer;
@@ -37,7 +37,7 @@
     padding: 15px 25px;
     text-align: left;
     font-size: 18px;
-    background-color: #1976d2;
+    background-color: #056c0e;
     color: white;
     border: none;
     width: 100%;
@@ -45,13 +45,13 @@
 }
 
 .sidebar button:hover {
-    background-color: #1565c0;
+    background-color: #b2b3b9;
 }
 
 .dashboard-header {
     padding: 20px;
-    background-color: #1976d2;
-    color: white;
+    background-color: #d9e2e9;
+    color: rgb(13, 13, 13);
     flex-grow: 1;
     text-align: center;
     display: flex;
@@ -62,7 +62,7 @@
 .dashboard-main {
     margin-left: 250px; /* Ensure content shifts to the right when the sidebar opens */
     padding: 20px;
-    background-color: #38080836;
+    background-color: #ebf4f2db;
     flex-grow: 1;
     transition: margin-left 0.3s ease; /* Smooth transition for the main content */
     width: 100%;
@@ -94,7 +94,7 @@
 }
 
 .quote-item {
-    background-color: rgba(176, 112, 228, 0.414);
+    background-color: rgba(232, 222, 240, 0.414);
     padding: 20px;
     border: 1px solid #0e0808;
     border-radius: 5px;
@@ -120,7 +120,7 @@
 }
 
 .quote-input:focus {
-    border: 2px solid #1976d2;
+    border: 2px solid #e5ebf1;
 }
 
 .MuiButton-root {
@@ -135,6 +135,6 @@
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(220, 213, 213, 0.1);
     width: 400px;
 }

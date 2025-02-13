@@ -16,8 +16,10 @@ function Register() {
     const [role, setRole] = useState('user'); // Default role to 'user'
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    
     const bcrypt = require('bcryptjs'); // Import bcrypt for hashing passwords
 
+    // Register the user
     async function registerUser(event) {
         event.preventDefault();
 
@@ -25,21 +27,24 @@ function Register() {
             alert("Passwords do not match");
             return;
         }
+
         const hashedPassword = await bcrypt.hash(password, 10); // Hash the password with a salt of 10
 
+        const uniqueId = Math.floor(Math.random() * 1000000); // Generate a unique user ID (you can improve this logic)
+
         try {
-            const response = await fetch('/api/register', {
+            const response = await fetch('http://localhost:1337/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                
                 body: JSON.stringify({
                     name,
                     username,
                     email,
                     password: hashedPassword, // Use hashedPassword instead of plain password
                     role,
+                    userId: uniqueId // Send the unique user ID
                 }),
             });
 
@@ -51,13 +56,8 @@ function Register() {
             }
 
             if (data.status === 'ok') {
-                if (role === 'admin') {
-                    setSuccessMessage('Admin registration successful! You can now log in.');
-                    setTimeout(() => navigate('/login'), 3000); // Redirect after 3 seconds
-                } else  if (data.status === 'ok') {
-                    setSuccessMessage('Registration successful! You can now log in.');
-                    setTimeout(() => navigate('/login'), 3000); // Redirect to login page after 3 seconds
-                  }
+                setSuccessMessage('Registration successful! You can now log in.');
+                setTimeout(() => navigate('/login'), 3000); // Redirect to login page after 3 seconds
             }
         } catch (error) {
             console.error('Registration failed:', error);
@@ -83,7 +83,7 @@ function Register() {
                 <h1>Register</h1>
                 {errorMessage && <div className="error-message">{errorMessage}</div>}
                 {successMessage && <div className="success-message">{successMessage}</div>}
-                
+
                 <form onSubmit={registerUser}>
                     <input
                         value={name}
@@ -139,6 +139,7 @@ function Register() {
                     </div>
 
                     <button type="submit">Register</button>
+
                     <p>
                         Already have an account? <span onClick={() => navigate('/login')} style={{ cursor: 'pointer', color: 'blue' }}>Login</span>
                     </p>

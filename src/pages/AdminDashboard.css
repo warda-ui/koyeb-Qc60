@@ -3,8 +3,8 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #6a82fb, #fc5c7d) !important; 
-  color: #e40a0a;
+  background: linear-gradient(135deg, #c4c5cb, #d4cecf) !important; 
+  color: #c4bbbb;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,16 +17,16 @@ a {
 
 /* Header Styles */
 .app-bar {
-  background: linear-gradient(to right, #6a82fb, #fc5c7d) !important ; /* Same gradient as background */
+  background: linear-gradient(to right, #e26464, #f32040) !important ; /* Same gradient as background */
   padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(7, 191, 38, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .app-bar .icon-btn {
-  color: white;
+  color: rgb(12, 11, 11);
   font-size: 20px;
   width: 40px;
   height: 40px;
@@ -39,14 +39,14 @@ a {
 }
 
 .app-bar .icon-btn:hover {
-  color: #ffd700; /* Soft yellow highlight */
+  color: #a1a19b; /* Soft yellow highlight */
   transform: scale(1.1);
 }
 
 .app-bar .app-title {
   flex-grow: 1;
   text-align: center;
-  color: white;
+  color: rgb(10, 10, 10);
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -59,8 +59,8 @@ a {
 /* Sidebar Drawer */
 .drawer {
   width: 250px;
-  background: linear-gradient(to bottom, #6a82fbc8, #fc5c7ca6) !important; /* Matching gradient */
-  color: rgba(57, 20, 108, 0.194);
+  background: linear-gradient(to bottom, #f2f3f7c8, #ebe1e3a6) !important; /* Matching gradient */
+  color: rgba(11, 77, 6, 0.194);
   height: 100%;
   margin-top: 65px;
 }
@@ -78,7 +78,7 @@ a {
 }
 
 .drawer .list-item:hover {
-  background: rgba(57, 28, 112, 0.2) !important; /* Transparent white for hover */
+  background: rgba(204, 202, 206, 0.911) !important; /* Transparent white for hover */
   transform: translateX(5px);
 }
 
@@ -111,7 +111,7 @@ a {
 .heading {
   margin-bottom: 4rem;
   text-align: center;
-  color: #fff;
+  color: #0e0d0d;
 }
 
 /* Card Button Styles */
@@ -123,7 +123,7 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(15, 216, 28, 0.1);
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
