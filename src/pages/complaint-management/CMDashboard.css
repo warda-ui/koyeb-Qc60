@@ -62,12 +62,12 @@ body {
 }
 
 .MuiButton-root.MuiButton-contained {
-  background-color: #388e5f; /* Button background color (dark green) */
-  color: white;
+  background-color: #28c7c251; /* Button background color (dark green) */
+  color: rgb(12, 10, 10);
 }
 
 .MuiButton-root.MuiButton-contained:hover {
-  background-color: #016b04; /* Lighter green on hover */
+  background-color: #d3d3d3; /* Lighter green on hover */
 }
 
 .MuiButton-root.MuiButton-outlined {

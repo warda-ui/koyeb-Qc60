@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between; /* Space between the toggle button and title */
-  background: linear-gradient(135deg, #d74343, #b32945); 
+  background: linear-gradient(135deg, #adcbad, #d3ccce); 
   padding: 10px 20px;
   color: white;
   height: 60px; /* Ensure consistent height */
@@ -155,11 +155,11 @@
 
 /* Admin Panel Button Styling */
 .MuiButton-root.MuiButton-containedPrimary {
-  background-color: #1abc9c;
+  background-color: #0a8b42;
 }
 
 .MuiButton-root.MuiButton-containedSecondary {
-  background-color: #2ecc71;
+  background-color: #11ac52;
 }
 
 .MuiButton-root.MuiButton-containedDefault {

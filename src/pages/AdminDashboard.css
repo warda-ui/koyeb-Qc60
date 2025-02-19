@@ -3,7 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #c4c5cb, #d4cecf) !important; 
+  background: linear-gradient(135deg, #fafafa, #fafafa) !important; 
   color: #c4bbbb;
   height: 100vh;
   display: flex;
@@ -17,16 +17,16 @@ a {
 
 /* Header Styles */
 .app-bar {
-  background: linear-gradient(to right, #e26464, #f32040) !important ; /* Same gradient as background */
+  background: linear-gradient(to right, #aac6c4, #ada4d1) !important ; /* Same gradient as background */
   padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(7, 191, 38, 0.2);
+  box-shadow: 0 4px 8px rgba(113, 185, 113, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .app-bar .icon-btn {
-  color: rgb(12, 11, 11);
+  color: rgb(11, 12, 11);
   font-size: 20px;
   width: 40px;
   height: 40px;
@@ -39,7 +39,7 @@ a {
 }
 
 .app-bar .icon-btn:hover {
-  color: #a1a19b; /* Soft yellow highlight */
+  color: #f3f3f3; /* Soft yellow highlight */
   transform: scale(1.1);
 }
 
@@ -59,8 +59,8 @@ a {
 /* Sidebar Drawer */
 .drawer {
   width: 250px;
-  background: linear-gradient(to bottom, #f2f3f7c8, #ebe1e3a6) !important; /* Matching gradient */
-  color: rgba(11, 77, 6, 0.194);
+  background: linear-gradient(to bottom, #fafafa, #fafafa) !important; /* Matching gradient */
+  color: rgba(11, 9, 11, 0.913);
   height: 100%;
   margin-top: 65px;
 }
@@ -88,7 +88,7 @@ a {
 }
 
 .drawer .list-item .icon:hover {
-  color: #ffd700; /* Soft yellow for icons */
+  color: #089b27; /* Soft yellow for icons */
 }
 
 .drawer .list-item a {

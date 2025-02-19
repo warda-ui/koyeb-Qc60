@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
-    background: linear-gradient(135deg, #f4f5fc, #aaa7a7); 
+    background: linear-gradient(135deg, #fafafa, #fafafa); 
 }
 
 .login-card {
@@ -40,9 +40,9 @@ body {
 }
 
 .login-card input:focus {
-    border-color: #6a11cb; /* Purple border on focus */
+    border-color: #0e0e0f; /* Purple border on focus */
     outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(106, 17, 203, 0.3); /* Light shadow on focus */
+    box-shadow: 0 0 5px rgba(12, 12, 12, 0.3); /* Light shadow on focus */
 }
 
 .password-input {
@@ -67,7 +67,7 @@ body {
     width: 100%; /* Full width for the button */
     padding: 14px; /* Padding inside button */
     background-color: #084f19; /* Button background color */
-    color: white; /* White text color */
+    color: rgb(5, 5, 5); /* White text color */
     border: none; /* Remove default border */
     border-radius: 8px; /* Rounded corners */
     font-size: 18px; /* Button font size */
@@ -76,7 +76,7 @@ body {
 }
 
 .login-card button:hover {
-    background-color: #7e8083; /* Lighter purple background on hover */
+    background-color: #d3d3d3; /* Lighter purple background on hover */
     transform: scale(1.05); /* Slight scale effect on hover */
 }
 
