@@ -1,15 +1,8 @@
-name: your-project-name
-services:
-  - name: app
-    image: node:18
-    build:
-      dockerfile: Dockerfile
-    env:
-      NODE_ENV: production
-    ports:
-      - port: 1337
-    volumes:
-      - ./src:/app
-    commands:
-      - npm install
-      - npm run dev-all
+name: my-app
+type: web
+build:
+  commands:
+    - npm install
+    - npm run build
+run:
+  command: npm start

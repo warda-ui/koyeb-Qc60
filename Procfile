@@ -1,1 +1,1 @@
-web: npm run dev-all
+web: npm start
