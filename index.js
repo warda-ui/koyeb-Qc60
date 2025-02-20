@@ -34,16 +34,31 @@ app.use(
 
 
 
- // Create a router instance
+  // Create a router instance
 // Middleware
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static("uploads")); // Serve uploaded files statically
+app.use(express.static(path.join(__dirname, 'build'))); // Serve React build folder statically
+
 
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/complaints', complaintRoutes);
 
+
+app.get('/', (req, res) => {
+  res.send('Hello from your server!'); 
+  // Or render an initial HTML page if you have a frontend
+});
+
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) {
+    return next(); // Skip serving React for API routes
+  }
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 // Database Connection 
 
  const uri ="mongodb+srv://wardarajpoot050:warda1234@complaintsystem.u8ebr.mongodb.net/?retryWrites=true&w=majority&appName=ComplaintSystem";// Connect to MongoDB
