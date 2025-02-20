@@ -254,7 +254,7 @@ ul {
 li {
   padding: 10px;
   margin: 5px 0;
-  background-color: #383838;
+  background-color: #b5ce8288;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -296,12 +296,12 @@ h3 {
 
 button {
   display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #006400;
-  color: #ffffff;
-  border: none;
+  width: 40%;
+  margin: 5px 0;
+  padding: 20px;
+  background-color: #28c7c251;
+  color: #0e0e0e;
+  border: black;
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
@@ -310,7 +310,7 @@ button {
 }
 
 button:hover {
-  background-color: #383838;
+  background-color: #d3d3d3;
   color: rgba(52, 13, 13, 0.644);
 }
 
